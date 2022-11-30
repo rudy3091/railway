@@ -1,7 +1,7 @@
 {
   "name": "@rudy3091/railway",
-  "version": "0.0.4",
-  "main": "dist/index.js",
+  "version": "0.0.5",
+  "main": "dist/lib/index.js",
   "license": "MIT",
   "files": [
     "dist"
