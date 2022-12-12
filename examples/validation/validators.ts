@@ -4,7 +4,7 @@
  * - user's input should have shorter than 10 characters.
  * - user's input should not contain characters other than alphabets, numbers, underscore('_')
  */
-import * as R from '../../lib';
+import * as R from '@rudy3091/railway';
 
 export const isLongerThan3Chars: R.SingledRailway<string, string> = (input: string) => {
   if (input.length > 3) return R.success(input);

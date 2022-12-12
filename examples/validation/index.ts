@@ -1,5 +1,5 @@
 import { createInterface } from 'readline';
-import * as R from '../../lib';
+import * as R from '@rudy3091/railway';
 import {
   isLongerThan3Chars,
   isShorterThan10Chars,
