@@ -1,12 +1,15 @@
 {
   "name": "@rudy3091/railway",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "dist/lib/index.js",
   "license": "MIT",
   "files": [
     "dist"
   ],
-  "types": ["./dist/cjs/lib/index.d.ts", "./dist/esm/lib/index.d.ts"],
+  "types": [
+    "./dist/cjs/lib/index.d.ts",
+    "./dist/esm/lib/index.d.ts"
+  ],
   "scripts": {
     "build": "tsc -p tsconfig.base.json && tsc -p tsconfig.esm.json"
   },
