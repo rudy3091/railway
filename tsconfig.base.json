@@ -3,12 +3,16 @@
     "target": "es6",
     "module": "commonjs",
     "declaration": true,
-    "outDir": "./dist",
+    "outDir": "./dist/cjs",
     "rootDir": "./",
     "strict": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
-  }
+  },
+  "exclude": [
+    "**/node_modules/*",
+    "**/examples/*"
+  ]
 }
