@@ -1,29 +1,31 @@
 {
   "name": "@rudy3091/railway",
   "version": "0.0.7-beta1",
-  "main": "dist/lib/index.js",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
   "license": "MIT",
   "files": [
     "dist"
   ],
-  "types": [
-    "./dist/cjs/lib/index.d.ts",
-    "./dist/esm/lib/index.d.ts"
-  ],
+  "types": "./dist/lib/index.d.ts",
   "scripts": {
-    "build": "tsc -p tsconfig.base.json && tsc -p tsconfig.esm.json"
+    "build": "rollup -c"
   },
   "devDependencies": {
+    "@rollup/plugin-typescript": "^11.1.2",
     "@types/node": "^18.11.0",
     "prettier": "^2.7.1",
+    "rollup": "^3.25.3",
+    "rollup-plugin-typescript2": "^0.35.0",
     "ts-node": "^10.9.1",
+    "tslib": "^2.6.0",
     "typescript": "^4.8.4"
   },
   "exports": {
     ".": {
-      "types": "./dist/cjs/lib/index.d.ts",
-      "require": "./dist/cjs/lib/index.js",
-      "import": "./dist/esm/lib/index.js"
+      "types": "./dist/lib/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
     }
   }
 }

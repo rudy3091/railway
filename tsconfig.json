@@ -1,18 +1,15 @@
 {
   "compilerOptions": {
     "target": "es6",
-    "module": "commonjs",
+    "module": "ESNext",
     "declaration": true,
-    "outDir": "./dist/cjs",
+    "outDir": "./dist",
     "rootDir": "./",
     "strict": true,
-    "moduleResolution": "node",
+    "moduleResolution": "Node16",
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
   },
-  "exclude": [
-    "**/node_modules/*",
-    "**/examples/*"
-  ]
+  "exclude": ["**/node_modules/*", "**/examples/*"]
 }
