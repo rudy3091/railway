@@ -6,7 +6,7 @@
     "outDir": "./dist",
     "rootDir": "./",
     "strict": true,
-    "moduleResolution": "Node16",
+    "moduleResolution": "nodenext",
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
