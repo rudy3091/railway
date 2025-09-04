@@ -1,6 +1,6 @@
 {
   "name": "@rudy3091/railway",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
   "license": "MIT",
