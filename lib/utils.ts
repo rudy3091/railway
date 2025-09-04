@@ -6,9 +6,9 @@ import {
   SingledRailway,
 } from './types';
 
-export const convertAsync = <T>(
-  railway: SingledRailway<T, T>,
-): SingledAsyncRailway<T, T> => {
+export const convertAsync = <T, R>(
+  railway: SingledRailway<T, R>,
+): SingledAsyncRailway<T, R> => {
   return (value: T) => {
     return Promise.resolve(railway(value));
   };

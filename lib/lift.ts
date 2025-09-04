@@ -15,7 +15,7 @@ export const lift = <T, R>(railway: SingledRailway<T, R>): DoubledRailway<T, R> 
   };
 };
 
-export function liftToAsync<T>(railway: SingledRailway<T, T>): DoubledAsyncRailway<T, T> {
+export function liftToAsync<T, R>(railway: SingledRailway<T, R>): DoubledAsyncRailway<T, R> {
   return async (arg: Promise<Result<T>>) => {
     const result = await arg;
     if (result.success) {
@@ -28,9 +28,9 @@ export function liftToAsync<T>(railway: SingledRailway<T, T>): DoubledAsyncRailw
   };
 }
 
-export function liftPromise<T>(
-  railway: SingledAsyncRailway<T, T>
-): DoubledAsyncRailway<T, T> {
+export function liftPromise<T, R>(
+  railway: SingledAsyncRailway<T, R>
+): DoubledAsyncRailway<T, R> {
   return async (arg: Promise<Result<T>>) => {
     const result = await arg;
     if (result.success) {
@@ -43,7 +43,7 @@ export function liftPromise<T>(
   };
 }
 
-export function liftPiped<T>(railway: DoubledRailway<T, T>): DoubledAsyncRailway<T, T> {
+export function liftPiped<T, R>(railway: DoubledRailway<T, R>): DoubledAsyncRailway<T, R> {
   return async (arg: Promise<Result<T>>) => {
     const result = await arg;
     if (result.success) {
